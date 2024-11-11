@@ -73,18 +73,16 @@ void loop() {
   else if (EstadoW == 1 && EstadoX == 1 && EstadoY == 1 && EstadoZ == 1) //F
     {number = 15;}
 
-
-  // Limpiar el display antes de actualizar
   clearDisplay1();
 
   // Mostrar el número en el display
   display7Segment1(number);
 
-  // Imprimir el número en consola para depuración
+  // Imprimir el número en monitor serial
   Serial.print("Valor: ");
   Serial.println(number);
 
-  delay(200);  // Pequeño retardo para evitar rebotes
+  delay(200);
 }
 
 void display7Segment1(int number) {
